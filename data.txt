@@ -1,0 +1,7 @@
+Insert text on data.txt
+
+data
+No      Nama
+1       Gani
+2       Shinoa
+3       Yagami
