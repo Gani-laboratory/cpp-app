@@ -9,15 +9,19 @@ class Mahasiswa {
         string NIM;
         string jurusan;
         double IPK;
+
+    Mahasiswa(string inputNama, string NIM,string jurusan, double IPK) {
+        // cout << "ini adalah constructor" << endl;
+        nama = inputNama;
+        Mahasiswa::NIM = NIM;
+        Mahasiswa::jurusan = jurusan;
+        Mahasiswa::IPK = IPK;
+    }
 };
 
 int main(int argc, char const *argv[])
 {
-    Mahasiswa data1;
-    data1.nama = "Gani";
-    data1.jurusan = "RPL";
-    data1.NIM = "0129307";
-    data1.IPK = 9;
+    Mahasiswa data1 = Mahasiswa("Gani", "0129307", "RPL", 9);
     cout << "===== DATA 1 =====" << endl;
     cout << "nama: " << data1.nama << endl;
     cout << "NIM: " << data1.NIM << endl;
