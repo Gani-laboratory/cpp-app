@@ -7,8 +7,8 @@
       "label": "Compile C++",
       "type": "shell",
       "command": "g++",
-      "args": ["-std=c++17", "./src/excepction.cpp", "-o", "./bin/Main.out"]
-      // "args": ["-std=c++17", "./src/crud/main.cpp", "./src/crud/service.cpp", "./src/crud/crud.cpp", "-o", "./bin/Main.out"]
+      // "args": ["-std=c++17", "./src/excepction.cpp", "-o", "./bin/Main.out"]
+      "args": ["-std=c++17", "./src/crud/**.cpp", "-o", "./bin/Main.out"]
     },
     {
       "label": "Run",
