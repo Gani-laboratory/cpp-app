@@ -7,7 +7,7 @@
       "label": "Compile C++",
       "type": "shell",
       "command": "g++",
-      "args": ["-std=c++17", "./src/oop/main.cpp", "-o", "./bin/Main.out"]
+      "args": ["-std=c++17", "./src/oop/latihan.cpp", "-o", "./bin/Main.out"]
       // "args": ["-std=c++17", "./src/procedural/crud/**.cpp", "-o", "./bin/Main.out"]
     },
     {
