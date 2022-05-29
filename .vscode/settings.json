@@ -49,5 +49,7 @@
     "*.baks": "cpp",
     "fstream": "cpp"
   },
-  "C_Cpp.errorSquiggles": "Enabled"
+  "C_Cpp.errorSquiggles": "Enabled",
+  "terminal.integrated.profiles.windows": { "Git Bash": { "path": "C:\\Program Files\\Git\\bin\\bash.exe" } },
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
