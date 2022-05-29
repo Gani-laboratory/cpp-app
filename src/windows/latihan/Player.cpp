@@ -3,7 +3,7 @@
 using namespace std;
 
 // penggunaan namespace dalam class biasa digunakan untuk mendefinisikan sebuah prototype
-Player::Player(const char *name)
+Player::Player(const char *name = "Player") // default assignment
 {
   this->name = name;
 }
