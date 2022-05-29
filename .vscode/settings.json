@@ -51,5 +51,7 @@
   },
   "C_Cpp.errorSquiggles": "Enabled",
   "terminal.integrated.profiles.windows": { "Git Bash": { "path": "C:\\Program Files\\Git\\bin\\bash.exe" } },
-  "terminal.integrated.defaultProfile.windows": "Git Bash"
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.defaultFormatter": "ms-vscode.cpptools",
+  "editor.formatOnSave": true
 }

@@ -7,7 +7,7 @@ class ExMemory
 {
   public:
   string data;
-  // constructor
+  // constructor selalu public, karena diakses ( diluar class ) setiap menginisialisasi obj baru
   ExMemory(const char* args) {
     data = args;
     cout << "memory " << data << " dibuat" << endl;
