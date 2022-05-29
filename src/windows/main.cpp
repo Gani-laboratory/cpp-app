@@ -11,6 +11,10 @@ class Mahasiswa{
   Mahasiswa(const char* args){
     namePublic = args;
   }
+  void setAndGetPrivateName(){
+    namePrivate = namePublic;
+    cout << namePrivate << endl;
+  }
   private:
   string namePrivate;
 };
@@ -18,6 +22,8 @@ class Mahasiswa{
 int main(int argc, char const *argv[])
 {
   ClassTypes* obj = new ClassTypes("object 1", 1);
+  Mahasiswa* test = new Mahasiswa("name");
+  test->setAndGetPrivateName();
   cout << obj->health << endl;
   obj->setHealth(2);
   cout << obj->health << endl;
