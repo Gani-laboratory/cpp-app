@@ -7,7 +7,7 @@ Player::Player(const char *name = "Player") // default assignment
 {
   this->name = name;
 }
-void Player::display()
+void Player::display() const
 {
   cout << "player ini adalah " << this->name << endl;
   cout << "Menggunakan senjata: " << this->weapon->getName();

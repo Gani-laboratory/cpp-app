@@ -14,7 +14,7 @@ private:
 
 public:
   Player(const char *);
-  void display();
+  void display() const;
   void equipWeapon(Weapon *);
 };
 #endif
