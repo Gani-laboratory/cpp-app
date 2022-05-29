@@ -15,10 +15,10 @@ class ClassTypes{
       cout << this->dataStr << endl;
     }
 
-    // penggunaan namespace dalam class biasa digunakan untuk mendefinisikan sebuah prototype
     void setHealth(int);
 };
 
+    // penggunaan namespace dalam class biasa digunakan untuk mendefinisikan sebuah prototype
 void ClassTypes::setHealth(int health){
   this->health = health;
 }
