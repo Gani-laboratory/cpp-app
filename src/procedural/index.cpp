@@ -2,6 +2,15 @@
 #include <array>
 using namespace std;
 
+/*
+Q & A !
+
+Q: Bang bukannya di c++ struct juga bisa dipakai sebagai pengganti class? Misal constructor, di struct juga ada constructor. Method, attribute, public, protected, private ada juga di struct. Inheritance dan friend zone juga bisa. Jadi apa sebenarnya yang spesial dari class yang tidak ada di struct? Mungkin dari segi performance gitu?
+A: bisa dijadikan pengganti. Tapi struct itu value type, sedangkan class adalah reference type. Jadi struct gak bisa inheritance, class bisa. struct gak bisa jadi abstract, class bisa. kesimpulannya, semakin maju pengembangan software, struct sebagai pengganti class bakalan sulit nanti kalau mau dikembangkan lagi programnya
+
+friend = sebuah keyword yg nantinya akan membuat function dapat mengakses member public / non-public sebuah class
+*/
+
 // prototype function
 int pangkatkan(int n, int p);
 
@@ -11,217 +20,214 @@ int main()
 {
     char nama;
     cout << "Hello C++ !" << endl;
-    
-// program kalkulator
 
-//     float y,z,hasil;
-//     char aritmatika;
+    // program kalkulator
 
-//     cout << "\nMasukkan Nilai Pertama: ";
-//     cin >> y;
-//     cout << "Pilih operator: ";
-//     cin >> aritmatika;
-//     cout << "Masukkan Nilai Kedua: ";
-//     cin >> z;
+    //     float y,z,hasil;
+    //     char aritmatika;
 
-//     if (aritmatika == '+')
-//     {
-//         hasil = y+z;
-//     } else if (aritmatika == '-')
-//     {
-//         hasil = y-z;
-//     } else if (aritmatika == '/')
-//     {
-//         hasil = y/z;
-//     } else if (aritmatika == 'x')
-//     {
-//         hasil = y*z;
-//     }
+    //     cout << "\nMasukkan Nilai Pertama: ";
+    //     cin >> y;
+    //     cout << "Pilih operator: ";
+    //     cin >> aritmatika;
+    //     cout << "Masukkan Nilai Kedua: ";
+    //     cin >> z;
 
-//     cout << "Hasil Perhitungan: " << y << aritmatika << z;
-//     cout << " = " << hasil << endl;
+    //     if (aritmatika == '+')
+    //     {
+    //         hasil = y+z;
+    //     } else if (aritmatika == '-')
+    //     {
+    //         hasil = y-z;
+    //     } else if (aritmatika == '/')
+    //     {
+    //         hasil = y/z;
+    //     } else if (aritmatika == 'x')
+    //     {
+    //         hasil = y*z;
+    //     }
 
-// // program membuat deret fibonacci
+    //     cout << "Hasil Perhitungan: " << y << aritmatika << z;
+    //     cout << " = " << hasil << endl;
 
-//     int n;
-//     int f_n;
-//     int f_n1;
-//     int f_n2;
+    // // program membuat deret fibonacci
 
+    //     int n;
+    //     int f_n;
+    //     int f_n1;
+    //     int f_n2;
 
-//     cout << "Masukkan Nilai n: ";
-//     cin >> n;
+    //     cout << "Masukkan Nilai n: ";
+    //     cin >> n;
 
-//     f_n1 = 1;
-//     f_n2 = 0;
-//     f_n = f_n1 + f_n2; 
-//     cout << f_n << " ";
+    //     f_n1 = 1;
+    //     f_n2 = 0;
+    //     f_n = f_n1 + f_n2;
+    //     cout << f_n << " ";
 
-//     for (int i = 1; i <= n; i++)
-//     {
-//         f_n = f_n1 + f_n2;
-//         f_n2 = f_n1;
-//         f_n1 = f_n;
-//         cout << f_n << " ";
-//     }
+    //     for (int i = 1; i <= n; i++)
+    //     {
+    //         f_n = f_n1 + f_n2;
+    //         f_n2 = f_n1;
+    //         f_n1 = f_n;
+    //         cout << f_n << " ";
+    //     }
 
-// // program membuat segitiga & belah ketupat
+    // // program membuat segitiga & belah ketupat
 
-//     int x;
-//     cout << "Masukkan Nilai x: ";
-//     cin >> x;
+    //     int x;
+    //     cout << "Masukkan Nilai x: ";
+    //     cin >> x;
 
-//     cout << "Segitiga siku-siku:\n";
-//     for (int i = 1; i <= x; i++)
-//     {
-//         for (int k = 0; k < i; k++)
-//         {
-//             cout << "*";
-//         }
-//         cout << endl;
-//     }
+    //     cout << "Segitiga siku-siku:\n";
+    //     for (int i = 1; i <= x; i++)
+    //     {
+    //         for (int k = 0; k < i; k++)
+    //         {
+    //             cout << "*";
+    //         }
+    //         cout << endl;
+    //     }
 
-//     cout << "\n";
+    //     cout << "\n";
 
-//     for (int i = 1; i <= x; i++)
-//     {
-//         for (int k = x; k > i; k--)
-//         {
-//             cout << " ";
-//         }
-//         for (int l = 0; l < i; l++)
-//         {
-//             cout << "*";
-//         }
-        
-//         cout << endl;
-//     }
-    
-//     cout << "\n";
+    //     for (int i = 1; i <= x; i++)
+    //     {
+    //         for (int k = x; k > i; k--)
+    //         {
+    //             cout << " ";
+    //         }
+    //         for (int l = 0; l < i; l++)
+    //         {
+    //             cout << "*";
+    //         }
 
-//     for (int i = 1; i <= x; i++)
-//     {
-//         for (int k = x; k >= i; k--)
-//         {
-//             cout << "*";
-//         }
-//         for (int l = 0; l < i; l++)
-//         {
-//             cout << " ";
-//         }
-        
-//         cout << endl;
-//     }
+    //         cout << endl;
+    //     }
 
-//     cout << "\n";
+    //     cout << "\n";
 
-//     for (int i = 1; i <= x; i++)
-//     {
-//         for (int k = 0; k < i; k++)
-//         {
-//             cout << " ";
-//         }
-//         for (int l = x; l >= i; l--)
-//         {
-//             cout << "*";
-//         }
-//         cout << endl;
-//     }
+    //     for (int i = 1; i <= x; i++)
+    //     {
+    //         for (int k = x; k >= i; k--)
+    //         {
+    //             cout << "*";
+    //         }
+    //         for (int l = 0; l < i; l++)
+    //         {
+    //             cout << " ";
+    //         }
 
-//     cout << "\n";
+    //         cout << endl;
+    //     }
 
-//     cout << "Segitiga sama kaki:\n";
+    //     cout << "\n";
 
-//     cout << "\n";
+    //     for (int i = 1; i <= x; i++)
+    //     {
+    //         for (int k = 0; k < i; k++)
+    //         {
+    //             cout << " ";
+    //         }
+    //         for (int l = x; l >= i; l--)
+    //         {
+    //             cout << "*";
+    //         }
+    //         cout << endl;
+    //     }
 
-//     for (int i = 1; i <= x; i++)
-//     {
-//         for (int k = x; k > i; k--)
-//         {
-//             cout << " ";
-//         }
-//         for (int l = 0; l < i; l++)
-//         {
-//             cout << "*";
-//         }
+    //     cout << "\n";
 
-//         for (int y = 1; y < i; y++)
-//         {
-//             cout << "*";
-//         }
-        
-//         cout << endl;
-//     }
+    //     cout << "Segitiga sama kaki:\n";
 
-//     cout << "\n";
+    //     cout << "\n";
 
-//     for (int i = 0; i < x; i++)
-//     {
-//         for (int l = 0; l < i; l++)
-//         {
-//             cout << " ";
-//         }
-//         for (int k = i; k < x; k++)
-//         {
-//             cout << "*";
-//         }
-//         for (int y = x-1; y > i; y--)
-//         {
-//             cout << "*";
-//         }
-        
+    //     for (int i = 1; i <= x; i++)
+    //     {
+    //         for (int k = x; k > i; k--)
+    //         {
+    //             cout << " ";
+    //         }
+    //         for (int l = 0; l < i; l++)
+    //         {
+    //             cout << "*";
+    //         }
 
-//         cout << endl;
-//     }
+    //         for (int y = 1; y < i; y++)
+    //         {
+    //             cout << "*";
+    //         }
 
-//     cout << "Belah ketupat:\n";
+    //         cout << endl;
+    //     }
 
-//     cout << "\n";
+    //     cout << "\n";
 
-//     for (int i = 1; i <= x; i++)
-//     {
-//         for (int k = x; k > i; k--)
-//         {
-//             cout << " ";
-//         }
-//         for (int l = 0; l < i; l++)
-//         {
-//             cout << "*";
-            
-//         }
+    //     for (int i = 0; i < x; i++)
+    //     {
+    //         for (int l = 0; l < i; l++)
+    //         {
+    //             cout << " ";
+    //         }
+    //         for (int k = i; k < x; k++)
+    //         {
+    //             cout << "*";
+    //         }
+    //         for (int y = x-1; y > i; y--)
+    //         {
+    //             cout << "*";
+    //         }
 
-//         for (int x = 1; x < i; x++)
-//         {
-//             cout << "*";
-//         }
-        
-//         cout << endl;
-//     }
+    //         cout << endl;
+    //     }
 
-//     for (int i = 1; i < x; i++)
-//     {
-//         for (int l = 0; l < i; l++)
-//         {
-//             cout << " ";
-//         }
-//         for (int k = i; k < x; k++)
-//         {
-//             cout << "*";
-//         }
-//         for (int y = x-1; y > i; y--)
-//         {
-//             cout << "*";
-//         }
-        
+    //     cout << "Belah ketupat:\n";
 
-//         cout << endl;
-//     }
-    
-//     cout << "\n";
+    //     cout << "\n";
 
-// program pangkat
-    
-    // int number; 
+    //     for (int i = 1; i <= x; i++)
+    //     {
+    //         for (int k = x; k > i; k--)
+    //         {
+    //             cout << " ";
+    //         }
+    //         for (int l = 0; l < i; l++)
+    //         {
+    //             cout << "*";
+
+    //         }
+
+    //         for (int x = 1; x < i; x++)
+    //         {
+    //             cout << "*";
+    //         }
+
+    //         cout << endl;
+    //     }
+
+    //     for (int i = 1; i < x; i++)
+    //     {
+    //         for (int l = 0; l < i; l++)
+    //         {
+    //             cout << " ";
+    //         }
+    //         for (int k = i; k < x; k++)
+    //         {
+    //             cout << "*";
+    //         }
+    //         for (int y = x-1; y > i; y--)
+    //         {
+    //             cout << "*";
+    //         }
+
+    //         cout << endl;
+    //     }
+
+    //     cout << "\n";
+
+    // program pangkat
+
+    // int number;
     // int pangkat;
 
     // cout << "Masukkan Angka: ";
@@ -232,9 +238,9 @@ int main()
     // cout << "Hasil: ";
     // cout << pangkatkan(number, pangkat);
 
-// array
+    // array
 
-    int tesArr[5] = {1,2,3,4,5};
+    int tesArr[5] = {1, 2, 3, 4, 5};
     // alternative dalam mengisi value sebuah array
     tesArr[0] = 1;
     tesArr[1] = 2;
@@ -242,7 +248,8 @@ int main()
     tesArr[3] = 4;
     tesArr[4] = 5;
 
-    cout << "\n" << tesArr << endl;
+    cout << "\n"
+         << tesArr << endl;
     cout << "Addressnya adalah:" << &tesArr[0] << " Nilainya adalah:" << tesArr[0] << endl;
     cout << "Addressnya adalah:" << &tesArr[1] << " Nilainya adalah:" << tesArr[1] << endl;
     cout << "Addressnya adalah:" << &tesArr[2] << " Nilainya adalah:" << tesArr[2] << endl;
@@ -252,7 +259,7 @@ int main()
     cout << "\nJumlah member array: " << sizeof(tesArr) / sizeof(int) << endl;
 
     // standard lib arr
-    array<int, 5>tesArr2;
+    array<int, 5> tesArr2;
     for (int i = 0; i < 5; i++)
     {
         tesArr2[i] = i;
@@ -264,7 +271,6 @@ int main()
     {
         cout << value << endl;
     }
-    
 
     cin.get();
     return 0;
@@ -272,11 +278,14 @@ int main()
 
 // rekrusif function
 
-int pangkatkan(int n, int p) {
+int pangkatkan(int n, int p)
+{
     if (p == 1)
     {
         return n;
-    } else {
+    }
+    else
+    {
         return n * pangkatkan(n, p - 1);
     }
 }
